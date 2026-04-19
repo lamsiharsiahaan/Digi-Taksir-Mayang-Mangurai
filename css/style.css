@@ -48,6 +48,8 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
+  height: 50px;
+  width: auto;
 }
 
 .logo-container {
@@ -64,6 +66,52 @@ body {
 
 .logo-container img {
   height: 30px;
+}
+
+/* CENTER TITLE */
+.header-title {
+  text-align: center;
+}
+
+.header-title h2 {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+}
+
+.header-title span {
+  color: var(--p-gold);
+}
+
+.header-title p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #e0f2e9;
+}
+
+/* RIGHT SIDE */
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn-dashboard {
+  background: white;
+  color: var(--p-green);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-dashboard:hover {
+  background: var(--p-gold);
+  color: black;
 }
 
 .header-text h1 {
@@ -274,7 +322,7 @@ input {
 
 .header-inner {
   display: flex;
-  justify-content: space-between; /* logo kiri, dashboard kanan */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
@@ -295,6 +343,7 @@ body {
   color: var(--text-dark);
   margin: 0;
   padding: 20px;
+
   /* Latar belakang halaman utama menggunakan gambar brosur dengan efek blur */
   background-image: linear-gradient(
       rgba(240, 240, 240, 0.9),
@@ -329,29 +378,43 @@ body {
 .header-logo {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
 }
 
-/* Menampilkan Gambar Produk Galeri 24 di Header */
-.banner-img {
-  height: 100px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.header-logo img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
 }
 
 .header-text h1 {
   margin: 0;
-  color: var(--p-gold);
+  color: var(--white);
   font-size: 26px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
+.gold-text {
+  color: var(--p-gold);
+  /* Opsional: tambahkan efek glow/shadow agar lebih menonjol */
+  text-shadow: 0 0 10px rgba(179, 139, 45, 0.5);
+}
+
 .header-text p {
   margin: 5px 0 0;
-  color: var(--p-gold);
+  color: var(--white);
   font-weight: bold;
   font-size: 1.1em;
+}
+
+/* Header Right Section */
+.header-right2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  justify-content: center;
 }
 
 /* Tab Margin Selector */
@@ -432,7 +495,7 @@ th:first-child {
 }
 
 .val-pinjaman {
-  color: #d32f2f; /* Warna merah kontras untuk jumlah pinjaman */
+  color: #d32f2f;
   font-weight: bold;
 }
 
@@ -446,12 +509,32 @@ th:first-child {
   margin: 20px -30px -30px -30px;
 }
 
-#date-display {
-  font-size: 0.9em;
+.date-display {
+  font-size: 0.7em;
   background: var(--p-green);
   padding: 5px 15px;
   border-radius: 20px;
-  color: var(--p-gold);
+  color: var(--white);
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.btn-dashboard {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(133, 100, 27, 0.3);
+}
+
+.btn-dashboard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(133, 100, 27, 0.4);
 }
 
 /* ================= Dashboard ================= */
